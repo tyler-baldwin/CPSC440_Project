@@ -1,22 +1,19 @@
 <?php
 
 include "db_connect.php";
+$keywordfromform = $_GET["fname"];
 
-// if there are any values in the table, display them one at a time.
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
-echo $mysqli->host_info . "<br>";
-
-echo"<h2>Current students living on campus</h2>";
-$sql = "SELECT studentid, studentyear, gender, email, roomnum, fname, lname, buildingid, raid  FROM student";
+// Search the database
+echo"<h2>You searched for $keywordfromform</h2>";
+$sql = "SELECT studentid, studentyear, gender, email, roomnum, fname, lname, buildingid, raid  FROM student 
+		WHERE fname LIKE '%"  .  $keywordfromform  .  "%'";
 $result = $mysqli->query($sql);
 
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "Student ID: " . $row["studentid"].
+    echo "Student ID: " . $row["studentid"]. 
 	"  -Student Year: " . $row["studentyear"]. 
 	" -gender: " . $row["gender"].
 	" -email " . $row["email"].

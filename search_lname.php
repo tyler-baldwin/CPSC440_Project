@@ -1,19 +1,19 @@
 <?php
 
 include "db_connect.php";
-$keywordfromform = $_GET["keyword"];
+$keywordfromform = $_GET["lname"];
 
 // Search the database
-echo"<h2>Here is the student you searched for</h2>";
+echo"<h2>You searched for $keywordfromform</h2>";
 $sql = "SELECT studentid, studentyear, gender, email, roomnum, fname, lname, buildingid, raid  FROM student 
-		WHERE fname LIKE '%"  .  $keywordfromform  .  "%'";
+		WHERE lname LIKE '%"  .  $keywordfromform  .  "%'";
 $result = $mysqli->query($sql);
 
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "Student ID: " . $row["studentid"].
+    echo "Student ID: " . $row["studentid"]. 
 	"  -Student Year: " . $row["studentyear"]. 
 	" -gender: " . $row["gender"].
 	" -email " . $row["email"].
