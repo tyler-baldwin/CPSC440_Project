@@ -1,12 +1,12 @@
 <?php
 
 include "db_connect.php";
-$keywordfromform = $_GET["keyword"];
+$keywordfromform = $_GET["lname"];
 
 // Search the database
 echo"<h2>You searched for $keywordfromform</h2>";
 $sql = "SELECT studentid, studentyear, gender, email, roomnum, fname, lname, buildingid, raid  FROM student 
-		WHERE fname LIKE '%"  .  $keywordfromform  .  "%'";
+		WHERE lname LIKE '%"  .  $keywordfromform  .  "%'";
 $result = $mysqli->query($sql);
 
 

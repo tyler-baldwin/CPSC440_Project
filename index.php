@@ -1,5 +1,6 @@
 <html>
-
+<center>
+<body style = "background-color:powderblue;">
 <head>
 </head>
 
@@ -18,14 +19,14 @@ include "db_connect.php";
 ?>
 
 <!--href to list of all students living on campus -->
-<a href ="search_all_students.php">Current list of all students living on campus.</a>
+<a href ="search_all_students.php"><b>Current list of all students living on campus.</b></a>
 	<br>
 		<br>
 <hr>
 <!--search for student by first name -->
-<form action="search_keyword.php">
+<form action="search_fname.php">
 	<b>Search for a student by <i>FIRST</i> name</b><br> <br>
-	<input type="text" name="keyword">
+	<input type="text" name="fname">
 	
 	<br>
 		<br>
@@ -33,7 +34,18 @@ include "db_connect.php";
 	<input type="submit" value="Submit">
 	
 </form>
+<hr>
 
+<form action="search_lname.php">
+	<b>Search for a student by <i>LAST</i> name</b><br> <br>
+	<input type="text" name="lname">
+	
+	<br>
+		<br>
+	
+	<input type="submit" value="Submit">
+	
+</form>
 
 <hr>
 <!--add new student form -->
@@ -85,7 +97,7 @@ $mysqli->close();
 
 
 </body>
-
+</center>
 </html>
 
 
