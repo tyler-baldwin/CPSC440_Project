@@ -6,93 +6,98 @@
 
 <body>
 
-<h1><center>RA DATABASE</center></h1>
+	<h1><center>RA DATABASE</center></h1>
 
-<?php
+	<?php
 
-//connects to the database
-include "db_connect.php";
+	//connects to the database
+	include "db_connect.php";
 
-//shows all students in DB
-//include "search_all_students.php";
+	//shows all students in DB
+	//include "search_all_students.php";
 
-?>
+	?>
 
-<!--href to list of all students living on campus -->
-<a href ="search_all_students.php"><b>Current list of all students living on campus.</b></a>
-	<br>
+	<!--href to list of all students living on campus -->
+	<a href ="search_all_students.php"><b>Current list of all students living on campus.</b></a>
 		<br>
-<hr>
-<!--search for student by first name -->
-<form action="search_fname.php">
-	<b>Search for a student by <i>FIRST</i> name</b><br> <br>
-	<input type="text" name="fname">
+		
+			<br>
 	
-	<br>
+	<a href ="search_all_organization.php"><b>Current list of all campus organizations.</b></a>
+	
+	<hr>
+	
+	<!--search for student by first name -->
+	<form action="search_fname.php">
+		<b>Search for a student by <i>FIRST</i> name</b><br> <br>
+		<input type="text" name="fname">
+		
 		<br>
-	
-	<input type="submit" value="Submit">
-	
-</form>
-<hr>
+			<br>
+		
+		<input type="submit" value="Submit">
+		
+	</form>
+	<hr>
 
-<form action="search_lname.php">
-	<b>Search for a student by <i>LAST</i> name</b><br> <br>
-	<input type="text" name="lname">
-	
-	<br>
+	<form action="search_lname.php">
+		<b>Search for a student by <i>LAST</i> name</b><br> <br>
+		<input type="text" name="lname">
+		
 		<br>
-	
-	<input type="submit" value="Submit">
-	
-</form>
+			<br>
+		
+		<input type="submit" value="Submit">
+		
+	</form>
 
-<hr>
-<!--add new student form -->
-<form action="add_student.php">
-	<h3>Enter a new student:</h3><br><br>
-	
-	<b>Enter Student ID:</b><br>
-	<input type="text" name="studentid"><br><br>
-	
-	<b>Enter Student year:</b><br>
-	<input type="text" name="studentyear"><br><br>
-	
-	<b>Enter Student gender (M/F):</b><br>
-	<input type="text" name="studentgender"><br><br>
-	
-	<b>Enter Student email:</b><br>
-	<input type="text" name="studentemail"><br><br>
-	
-	<b>Enter Student room number:</b><br>
-	<input type="text" name="studentroom"><br><br>
-	
-	<b>Enter First Name:</b><br>
-	<input type="text" name="newfname"><br><br>
+	<hr>
+	<!--add new student form -->
+	<form action="add_student.php">
+		<h3>Enter a new student:</h3><br><br>
+		
+		<b>Enter Student ID:</b><br>
+		<input type="text" name="studentid"><br><br>
+		
+		<b>Enter Student year:</b><br>
+		<input type="text" name="studentyear"><br><br>
+		
+		<b>Enter Student gender (M/F):</b><br>
+		<input type="text" name="studentgender"><br><br>
+		
+		<b>Enter Student email:</b><br>
+		<input type="text" name="studentemail"><br><br>
+		
+		<b>Enter Student room number:</b><br>
+		<input type="text" name="studentroom"><br><br>
+		
+		<b>Enter First Name:</b><br>
+		<input type="text" name="newfname"><br><br>
 
-	<b>Enter Last Name:</b> <br>
-	<input type="text" name="newlname"><br><br>
-	
-	<b>Enter Building ID:</b> <br>
-	<input type="text" name="newbuildingid"><br><br>
-	
-	<b>Enter RA ID:</b> <br>
-	<input type="text" name="newraid"><br><br>
-	
-	<br>
+		<b>Enter Last Name:</b> <br>
+		<input type="text" name="newlname"><br><br>
+		
+		<b>Enter Building ID:</b> <br>
+		<input type="text" name="newbuildingid"><br><br>
+		
+		<b>Enter RA ID:</b> <br>
+		<input type="text" name="newraid"><br><br>
+		
 		<br>
-	<input type="submit" value="Submit">
+			<br>
+		<input type="submit" value="Submit">
+		
+	</form>
+
+
+
+	<?php
+	//include "search_keyword.php";
 	
-</form>
+	$mysqli->close();
 
-
-
-<?php
-//include "search_keyword.php";
-
-$mysqli->close();
-
-?> 
+	?> 
 
 
 
