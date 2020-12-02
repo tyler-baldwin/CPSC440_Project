@@ -9,14 +9,20 @@
 
 <?php
 
+//connects to the database
 include "db_connect.php";
 
-include "search_all_students.php";
+//shows all students in DB
+//include "search_all_students.php";
 
 ?>
-<br>
+
+<!--href to list of all students living on campus -->
+<a href ="search_all_students.php">Current list of all students living on campus.</a>
 	<br>
-	
+		<br>
+<hr>
+<!--search for student by first name -->
 <form action="search_keyword.php">
 	<b>Search for a student by <i>FIRST</i> name</b><br> <br>
 	<input type="text" name="keyword">
@@ -30,6 +36,7 @@ include "search_all_students.php";
 
 
 <hr>
+<!--add new student form -->
 <form action="add_student.php">
 	<h3>Enter a new student:</h3><br><br>
 	
