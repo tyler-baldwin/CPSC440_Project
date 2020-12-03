@@ -6,7 +6,7 @@
 
 <body>
 
-	<h1><center>RA DATABASE</center></h1>
+	<h1><center>Resident Assistant DATABASE</center></h1>
 
 	<?php
 
@@ -23,9 +23,31 @@
 		<br>
 		
 			<br>
+			
+	<!--href to list of all student RAs. -->
+	<a href ="search_ra.php"><b>Current list of student resident assistants</b></a>
+		<br>
+		
+			<br>
 	
+	<!--href to list of all organizations on campus -->
 	<a href ="search_all_organization.php"><b>Current list of all campus organizations.</b></a>
-	
+		<br>
+		
+			<br>
+	<!--href to list of all students living on campus in an org. -->
+	<a href ="search_memberof.php"><b>Current list of students living on campus in organizations.</b></a>
+		<br>
+		
+			<br>
+	<!--href to list of Hall Directors. -->
+	<a href ="search_halldirectors.php"><b>Current list of Hall Directors.</b></a>
+		<br>
+		
+			<br>
+		
+		
+		
 	<hr>
 	
 	<!--search for student by first name -->
