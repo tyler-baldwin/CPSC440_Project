@@ -37,7 +37,7 @@ li a:hover {
 }
 </style>
 <ul>
-  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
+  <li><a href="index.php">Home</a></li>
   <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
   <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
   <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
@@ -45,9 +45,10 @@ li a:hover {
 
 </ul>
 
+<center>
 <body>
 
-	<h1><center>Resident Assistant DATABASE</center></h1>
+	<h1>Resident Assistant DATABASE</h1>
 
 	<?php
 
