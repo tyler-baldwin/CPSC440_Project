@@ -1,12 +1,12 @@
 <html>
-<center>
+
 <body style = "background-color:powderblue;">
 <head>
 </head>
 
 <body>
 
-	<h1><center>Resident Assistant DATABASE</center></h1>
+	<h1>Resident Assistant DATABASE</h1>
 
 	<?php
 
@@ -17,7 +17,7 @@
 	//include "search_all_students.php";
 
 	?>
-
+<nav>
 	<!--href to list of all students living on campus -->
 	<a href ="search_all_students.php"><b>Current list of all students living on campus.</b></a>
 		<br>
@@ -47,7 +47,7 @@
 			<br>
 		
 		
-		
+</nav>		
 	<hr>
 	
 	<!--search for student by first name -->
@@ -73,11 +73,13 @@
 		<input type="submit" value="Submit">
 		
 	</form>
-
-	<hr>
+	<details>
+	
 	<!--add new student form -->
+	<summary>
+	<b>Enter a new student</b><br><br>
+	</summary>
 	<form action="add_student.php">
-		<h3>Enter a new student:</h3><br><br>
 		
 		<b>Enter Student ID:</b><br>
 		<input type="text" name="studentid"><br><br>
@@ -111,8 +113,8 @@
 		<input type="submit" value="Submit">
 		
 	</form>
-
-
+	
+	</details>
 
 	<?php
 	//include "search_keyword.php";
