@@ -1,33 +1,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
 <html lang="en">
-
-
+    
 <head>
 	<title> RA Database </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="radatabase.css">
 </head>
-
-
-
-<nav>
-<ul>
-  <li><a href="index.php">Home</a></li>
-  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-  <li><a href="add_new_student.php">Add New Student</a></li>
-</ul>
-</nav>
-
-<header>
-	<h1>Resident Assistant DATABASE - Find A student by RA</h1>
-</header>
-
 
 <body>
 <main>
@@ -82,17 +63,18 @@
 	</ul>
 </nav>
 
+<header>
+	<h1>Resident Assistant DATABASE - Find A student by RA</h1>
+</header>
+
     <div class="row">
         <div class="column">
             <h2>Select an RA</h2>
             <table id="raTable">
                 <tr>
-                    <td>RA ID</td>
-                    <td>Student ID</td>
-                    <td>Hall Director</td>
-                    <!-- <td>
-                            <button type="button" class="use-address">Select</button>
-                        </td> -->
+                    <th>RA ID</th>
+                    <th>Student ID</th>
+                    <th>Hall Director</th>
                 </tr>
 
                 <?php
@@ -136,15 +118,15 @@
             <table id="stuTable">
                 <tr>
 
-                    <td>Student ID</td>
-                    <td>Year</td>
-                    <td>Gender</td>
-                    <td>Email</td>
-                    <td>Room</td>
-                    <td>First Name</td>
-                    <td>Last Name</td>
-                     <td>Building ID</td>
-                     <td>RAID</td>
+                    <th>Student ID</th>
+                    <th>Year</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Room</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                     <th>Building ID</th>
+                     <th>RAID</th>
 
                     
                 </tr>
