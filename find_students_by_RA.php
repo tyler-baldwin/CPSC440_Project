@@ -16,16 +16,8 @@
 
 
 
-<nav>
-<ul>
-  <li><a href="index.php">Home</a></li>
-  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-  <li><a href="add_new_student.php">Add New Student</a></li>
-</ul>
-</nav>
-
 <header>
-	<h1>Resident Assistant DATABASE - Find A student by RA</h1>
+	<h1>RA DBMS - Find A student by RA</h1>
 </header>
 
 
