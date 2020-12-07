@@ -1,4 +1,32 @@
+<html lang="en">
 
+<head>
+	<title> RA Database </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="radatabase.css">
+</head>
+
+
+<nav>
+	<ul>
+	  <li><a href="index.php">Home</a></li>
+	  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
+	  <li><a href="add_new_student.php">Add A New Student</a></li>
+	  <li class="dropdown">
+		<a href="javascript:void(0)" class="dropdown">Email by Class</a>
+		<div class="dropdown-content">
+		  <a href="findFreshmanEmail.php">Freshman</a>
+		  <a href="findSophomoreEmail.php">Sophomore</a>
+		  <a href="findJuniorEmail.php">Junior</a>
+		  <a href="findSeniorEmail.php">Senior</a>
+		</div>
+	  </li>
+
+	</ul>
+</nav>
+
+<body>
 <?php
 
 include "db_connect.php";
@@ -23,11 +51,22 @@ $result = $mysqli->query($sql);
 
 
 //will show all students and new student.
-include "search_all_students.php"
+echo"<font size = '5'>";
+echo"hello you have added ".$_GET["newfname"]; echo" ".$_GET["newlname"]; echo" student ID:".$_GET["studentid"]; 
+echo", in building".$_GET["newbuildingid"]; echo", in room".$_GET["studentroom"]; echo" ".$_GET["newfname"]; 
+echo" Resident assistant is".$_GET["newraid"];
+echo "</font>";
+
+
+include "search_all_students.php" 
+
+
 
 ?>
 
 <br>
 	<br>
 	
-<h2><a href ="index.php"> Return to main page</a></h2>
+
+
+</html>

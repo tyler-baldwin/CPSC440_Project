@@ -1,3 +1,5 @@
+<html lang="en">
+
 <head>
 	<title> RA Database </title>
 	<meta charset="utf-8">
@@ -63,3 +65,5 @@
             </table>
 
         </div>
+		
+</html>		

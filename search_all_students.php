@@ -6,7 +6,7 @@ include "db_connect.php";
 if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
-echo $mysqli->host_info . "<br>";
+
 
 echo"<h2>Current students living on campus</h2>";
 $sql = "SELECT studentid, studentyear, gender, email, roomnum, fname, lname, buildingid, raid  FROM student";
