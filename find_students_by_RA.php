@@ -200,15 +200,15 @@
             <h2>RA's Students</h2>
             <table id="stuTable">
                 <tr>
-                    <td>Student ID</td>
-                    <td>Year</td>
-                    <td>Gender</td>
-                    <td>Email</td>
-                    <td>Room</td>
-                    <td>First Name</td>
-                    <td>Last Name</td>
-                     <td>Building ID</td>
-                     <td>RAID</td>
+                    <th>Student ID</th>
+                    <th>Year</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Room</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                     <th>Building ID</th>
+                     <th>RAID</th>
                     
                 </tr>
 
