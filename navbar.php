@@ -16,7 +16,9 @@
 		<a href="javascript:void(0)" class="dropdown">Students by Class</a>
 		<div class="dropdown-content">
 		  <a href="freshmen_students.php">Freshmen</a>
-
+		  <a href="sophmore_students.php">Sophmore</a>
+		  <a href="junior_students.php">Junior</a>
+		  <a href="senior_students.php">Senior</a>
 		</div>
 	  </li>
 	  <li class="dropdown">
