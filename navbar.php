@@ -13,6 +13,13 @@
 		</div>
 	  </li>
 	  <li class="dropdown">
+		<a href="javascript:void(0)" class="dropdown">Students by Class</a>
+		<div class="dropdown-content">
+		  <a href="freshmen_students.php">Freshmen</a>
+
+		</div>
+	  </li>
+	  <li class="dropdown">
 		<a href="javascript:void(0)" class="dropdown">Building Rosters</a>
 		<div class="dropdown-content">
 		  <a href="findbuilding1.php">York</a>
