@@ -1,12 +1,34 @@
-<html>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-<body style = "background-color:powderblue;">
+<html lang="en">
+
+
 <head>
+	<title> RA Database </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="radatabase.css">
 </head>
+
+
+
+<nav>
+<ul>
+  <li><a href="index.php">Home</a></li>
+  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
+  <li><a href="add_new_student.php">Add New Student</a></li>
+</ul>
+</nav>
+
+<header>
+	<h1>Resident Assistant DATABASE</h1>
+</header>
+
 
 <body>
 
-	<h1>Resident Assistant DATABASE</h1>
+	
 
 	<?php
 
@@ -17,7 +39,7 @@
 	//include "search_all_students.php";
 
 	?>
-<nav>
+
 	<!--href to list of all students living on campus -->
 	<a href ="search_all_students.php"><b>Current list of all students living on campus.</b></a>
 		<br>
@@ -47,7 +69,7 @@
 			<br>
 		
 		
-</nav>		
+	
 	<hr>
 	
 	<!--search for student by first name -->
@@ -73,48 +95,8 @@
 		<input type="submit" value="Submit">
 		
 	</form>
-	<details>
-	
-	<!--add new student form -->
-	<summary>
-	<b>Enter a new student</b><br><br>
-	</summary>
-	<form action="add_student.php">
-		
-		<b>Enter Student ID:</b><br>
-		<input type="text" name="studentid"><br><br>
-		
-		<b>Enter Student year:</b><br>
-		<input type="text" name="studentyear"><br><br>
-		
-		<b>Enter Student gender (M/F):</b><br>
-		<input type="text" name="studentgender"><br><br>
-		
-		<b>Enter Student email:</b><br>
-		<input type="text" name="studentemail"><br><br>
-		
-		<b>Enter Student room number:</b><br>
-		<input type="text" name="studentroom"><br><br>
-		
-		<b>Enter First Name:</b><br>
-		<input type="text" name="newfname"><br><br>
 
-		<b>Enter Last Name:</b> <br>
-		<input type="text" name="newlname"><br><br>
-		
-		<b>Enter Building ID:</b> <br>
-		<input type="text" name="newbuildingid"><br><br>
-		
-		<b>Enter RA ID:</b> <br>
-		<input type="text" name="newraid"><br><br>
-		
-		<br>
-			<br>
-		<input type="submit" value="Submit">
-		
-	</form>
 	
-	</details>
 
 	<?php
 	//include "search_keyword.php";
@@ -126,7 +108,4 @@
 
 
 </body>
-</center>
 </html>
-
-

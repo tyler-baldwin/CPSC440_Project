@@ -1,0 +1,389 @@
+CREATE TABLE Organization (
+	orgID INT NOT NULL,
+	orgName VARCHAR(50) NOT NULL,
+	PRIMARY KEY (orgID));
+
+CREATE TABLE Building(
+	buildingID INT NOT NULL,
+	Buildingname CHAR(40) NOT NULL,
+	roomCount INT NOT NULL,
+	floorCount INT NOT NULL,
+	PRIMARY KEY(buildingID));
+
+CREATE TABLE HallDirector(
+	hallDirectorID INT NOT NULL,
+	fName VARCHAR(20) NOT NULL,
+	lName VARCHAR(30) NOT NULL,
+	buildingID INT NOT NULL,
+	PRIMARY KEY(hallDirectorID),
+	FOREIGN KEY(buildingID) 
+REFERENCES Building(buildingID)
+ON UPDATE CASCADE);
+
+/* CREATE TABLE Student (
+	studentID INT NOT NULL,
+	studentYear VARCHAR(10) NOT NULL,
+	gender VARCHAR(2) NOT NULL,
+	email VARCHAR(40) NOT NULL,
+	roomNum VARCHAR(10) NOT NULL,
+	fname VARCHAR(20) NOT NULL,
+	lname VARCHAR(20) NOT NULL,
+	buildingID INT NOT NULL,
+	raID INT NOT NULL,
+	PRIMARY KEY (studentID),
+	FOREIGN KEY(buildingID) 
+REFERENCES Building(buildingID)
+ON UPDATE CASCADE);
+*/
+
+ CREATE TABLE Student (
+	studentID INT NOT NULL,
+	studentYear VARCHAR(10) NOT NULL,
+	gender VARCHAR(2) NOT NULL,
+	email VARCHAR(40) NOT NULL,
+	roomNum VARCHAR(10) NOT NULL,
+	fname VARCHAR(20) NOT NULL,
+	lname VARCHAR(20) NOT NULL,
+	buildingID INT NOT NULL,
+	raID INT,
+	PRIMARY KEY (studentID),
+	FOREIGN KEY(buildingID) 
+REFERENCES Building(buildingID)
+ON UPDATE CASCADE);
+
+
+CREATE TABLE RA(
+	raID INT NOT NULL,
+	raInfo INT NOT NULL,
+	hallDirectorID INT NOT NULL,
+PRIMARY KEY(raID),
+FOREIGN KEY(raInfo)
+REFERENCES student(studentID)
+ON UPDATE CASCADE,
+FOREIGN KEY(hallDirectorID)
+	REFERENCES HallDirector(hallDirectorID)
+ON UPDATE CASCADE);
+
+
+
+
+CREATE TABLE memberOf(
+orgID INT NOT NULL,
+studentID INT NOT NULL,
+FOREIGN KEY(orgID)
+REFERENCES organization(orgID)
+ON UPDATE CASCADE,
+FOREIGN KEY(studentID)
+REFERENCES student(studentID)
+ON UPDATE CASCADE);
+
+
+
+
+/*- DATA -/*
+
+/*Organization*/
+
+INSERT INTO organization 
+VALUES ('1001', 'Accounting Club');
+
+INSERT INTO organization 
+VALUES ('1002', 'Alpha Chi Sigma');
+
+INSERT INTO organization 
+VALUES ('1003', 'American Marketing Association');
+
+INSERT INTO organization 
+VALUES ('1101','Center for Academic Success');
+
+INSERT INTO organization 
+VALUES ('1102','Neuroscience Club');
+
+INSERT INTO organization 
+VALUES ('1301', 'American Sign Language Club of CNU');
+
+INSERT INTO organization 
+VALUES ('1401', 'Alpha Delta Pi - Theta Nu Chapter');
+
+INSERT INTO organization 
+VALUES ('1501', 'Kappa Delta Rho');
+
+
+
+
+
+/*Building*/
+
+INSERT INTO building 
+VALUES ('0001','York', '68', '4');
+
+INSERT INTO building 
+VALUES ('0002','Santoto', '54', '4');
+
+INSERT INTO building 
+VALUES ('0003','Potomac', '60', '4');
+
+INSERT INTO building 
+VALUES ('0004','Warwick', '56', '4');
+
+INSERT INTO building 
+VALUES ('0005','James', '56', '4');
+
+INSERT INTO building 
+VALUES ('0006','Rappahannock', '56', '4');
+
+INSERT INTO building 
+VALUES ('0007', 'CNU Apartments', '118','3');
+
+/*Hall Director*/
+
+INSERT INTO halldirector 
+VALUES ('1001', 'George', 'Constanza','0001');
+
+INSERT INTO halldirector 
+VALUES ('2001', 'Anakin', 'Skywalker','0002');
+
+INSERT INTO halldirector 
+VALUES ('3001', 'Glennard', 'Frugner','0003');
+	
+INSERT INTO halldirector 
+VALUES ('4001', 'Marcus', 'Aurelius','0004');
+
+INSERT INTO halldirector 
+VALUES ('5001', 'Leia', 'Organa','0005');
+
+INSERT INTO halldirector 
+VALUES ('6001', 'Mister', 'Rogers','0006');
+
+INSERT INTO halldirector 
+VALUES ('7001', 'Luke', 'Skywalker','0007');
+
+
+
+/*Students*/
+
+/*RA STUDENT*/
+
+INSERT INTO student
+VALUES ('00884','Senior','M','tom.tominson@cnu.edu','101','Tom', 'Tominson','0001',null);
+
+INSERT INTO student
+VALUES ('00885','Sophomore','M','geogre.george@cnu.edu','101','george', 'george','0002',null);
+
+INSERT INTO student
+VALUES ('00986','Junior','F','allyssa.Love@cnu.edu','420','Allyssa','Love','0003',null);
+
+INSERT INTO student
+VALUES ('00971','Sophomore','M','ryan.holiday@cnu.edu','450','Ryan','Holiday','0004',null);
+
+INSERT INTO student
+VALUES ('00999','Senior','F','holly.berry@cnu.edu','221','Holly','Berry','0005',null);
+
+INSERT INTO student
+VALUES ('00998','Senior','M','tony.stark@cnu.edu','125','Tony','Stark','0006',null);
+
+INSERT INTO student
+VALUES ('00997','Senior','M','john.wick@cnu.edu','110','John','Wick','0007',null);
+
+
+/*STUDENT STUDENTS*/
+
+
+INSERT INTO student
+VALUES ('00992','Freshmen','M','mike.wizaski@cnu.edu','111','Mike','Wizaski','0001',null);
+
+INSERT INTO student
+VALUES ('00994','Sophomore','F','sheryl.crow@cnu.edu','121','Sheryl','Crow','0003',null);
+
+INSERT INTO student
+VALUES ('00123','Sophomore','F','carol.lynne@cnu.edu','331','Carol','Lynne','0003',null);
+
+INSERT INTO student
+VALUES ('00987','Freshmen','M','tyler.this.17@cnu.edu', '321','Tyler','This','0001',null);
+
+INSERT INTO student
+VALUES ('00345','Junior','M','bruce.thegoose.19@cnu.edu', '232','Bruce','TheGoose','0002',null);
+
+INSERT INTO student
+VALUES ('00981','Senior','M','william.banks.19@cnu.edu','310','William','Banks','0003',null);
+
+INSERT INTO student
+VALUES ('00789','Junior','M','joe.mama.32@cnu.edu', '120','Joe','Mama','0002',null);
+
+INSERT INTO student
+VALUES ('00666','Sophomore','F','Woman.Womanson.19@cnu.edu', '230','Woman','Womanson','0004',null);
+
+INSERT INTO student
+VALUES ('00543','Freshmen','F','madonna.shobanna.19@cnu.edu', '301','Madonna','Shobanna','0005',null);
+
+INSERT INTO student
+VALUES ('00544','Sophomore','F','flergh.blargh.19@cnu.edu', '301','Flergh','Blargh','0006',null);
+
+INSERT INTO student
+VALUES ('00654','Senior','M','buddy.holly.19@cnu.edu', '201','Buddy','Holly','0007',null);
+
+/*Member of*/
+
+INSERT INTO memberOf
+VALUES('1501','00987');
+
+INSERT INTO memberOf
+VALUES('1501','00789');
+
+INSERT INTO memberof 
+VALUES ('1001', '00654');
+
+INSERT INTO memberOf
+VALUES('1301','00992');
+
+INSERT INTO memberOf
+VALUES('1301','00544');
+
+INSERT INTO memberOf
+VALUES('1003','00884');
+
+INSERT INTO memberOf
+VALUES('1401','00666');
+
+INSERT INTO memberOf
+VALUES('1401','00543');
+
+INSERT INTO memberOf
+VALUES('1101','00981');
+
+INSERT INTO memberOf
+VALUES('1102','00123');
+
+INSERT INTO memberof 
+VALUES ('1002', '00345');
+
+INSERT INTO memberof 
+VALUES ('1003', '00981');
+
+INSERT INTO memberof 
+VALUES ('1101', '00999');
+
+INSERT INTO memberof 
+VALUES ('1102', '00997');
+
+INSERT INTO memberof 
+VALUES ('1301', '00345');
+
+INSERT INTO memberof 
+VALUES ('1401', '00986');
+
+INSERT INTO memberof 
+VALUES ('1501', '00992');
+
+
+/*RAraid, studentid-FK, hdid-FK*/
+
+INSERT INTO ra
+VALUES ('10884', '00884', '1001');
+
+INSERT INTO ra
+VALUES ('10985', '00885', '2001');
+
+INSERT INTO ra
+VALUES ('10986', '00986', '3001');
+
+INSERT INTO ra
+VALUES ('10971', '00971', '4001');
+
+INSERT INTO ra
+VALUES ('10999', '00999', '5001');
+
+INSERT INTO ra
+VALUES ('10998', '00998', '6001');
+
+INSERT INTO ra
+VALUES ('10997', '00997', '7001');
+
+
+
+ALTER TABLE Student
+ADD CONSTRAINT studentRARelation
+FOREIGN KEY (raID) REFERENCES
+	   ra (raID)
+ON UPDATE CASCADE;
+
+UPDATE student
+SET raID= '10986'
+WHERE studentid= '00123';
+
+UPDATE student
+SET raID= '10985'
+WHERE studentid= '00345';
+
+UPDATE student
+SET raID= '10999'
+WHERE studentid= '00543';
+
+UPDATE student
+SET raID= '10998'
+WHERE studentid= '00544';
+
+UPDATE student
+SET raID= '10997'
+WHERE studentid= '00654';
+
+UPDATE student
+SET raID= '10971'
+WHERE studentid= '00666';
+
+UPDATE student
+SET raID= '10985'
+WHERE studentid= '00789';
+
+UPDATE student
+SET raID= '10884'
+WHERE studentid= '00884';
+
+UPDATE student
+SET raID= '10985'
+WHERE studentid= '00885';
+
+UPDATE student
+SET raID= '10971'
+WHERE studentid= '00971';
+
+UPDATE student
+SET raID= '10986'
+WHERE studentid= '00981';
+
+
+UPDATE student
+SET raID= '10986'
+WHERE studentid= '00986';
+
+UPDATE student
+SET raID= '10884'
+WHERE studentid= '00987';
+
+UPDATE student
+SET raID= '10884'
+WHERE studentid= '00992';
+
+
+UPDATE student
+SET raID= '10986'
+WHERE studentid= '00994';
+
+
+UPDATE student
+SET raID= '10997'
+WHERE studentid= '00997';
+
+UPDATE student
+SET raID= '10998'
+WHERE studentid= '00998';
+
+UPDATE student
+SET raID= '10999'
+WHERE studentid= '00999';
+
+
+
+
+ALTER TABLE student
+MODIFY raID INT     NOT NULL;
