@@ -13,88 +13,26 @@
 	<link rel="stylesheet" href="radatabase.css">
 </head>
 
-<style>
-body {
-          font-family: 'Roboto', sans-serif;
-          font-size: 16px;
-        }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+<nav>
+	<ul>
+	  <li><a href="index.php">Home</a></li>
+	  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
+	  <li><a href="add_new_student.php">Add A New Student</a></li>
+	  <li class="dropdown">
+		<a href="javascript:void(0)" class="dropdown">Email by Class</a>
+		<div class="dropdown-content">
+		  <a href="findFreshmanEmail.php">Freshman</a>
+		  <a href="findSophomoreEmail.php">Sophomore</a>
+		  <a href="findJuniorEmail.php">Junior</a>
+		  <a href="findSeniorEmail.php">Senior</a>
+		</div>
+	  </li>
 
-li {
-  float: left;
-}
+	</ul>
+</nav>
 
-li a , .dropbtn{
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover , .dropdown:hover .dropbtn{
-  background-color: #999;
-}
-li.dropdown {
-  display: inline-block;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>
-<ul>
-  <li><a href="index.php">Home</a></li>
-  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Email by Class</a>
-    <div class="dropdown-content">
-      <a href="findFreshmanEmail.php">Freshman</a>
-      <a href="findSophomoreEmail.php">Sophomore</a>
-	  <a href="findJuniorEmail.php">Junior</a>
-	  <a href="findSeniorEmail.php">Senior</a>
-    </div>
-  </li>
-
-</ul>
-
-<center>
 <body>
 
-
-
-<nav>
-<ul>
-  <li><a href="index.php">Home</a></li>
-  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-  <li><a href="add_new_student.php">Add New Student</a></li>
-</ul>
-</nav>
 
 <header>
 	<h1>Resident Assistant DATABASE</h1>
