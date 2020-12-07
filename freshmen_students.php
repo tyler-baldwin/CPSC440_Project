@@ -37,7 +37,7 @@ include "navbar.php"
 
 
                 $sql = "SELECT studentid, studentyear, gender, email, roomnum, fname, lname, buildingid, raid  FROM student
-                        WHERE studentyear ='freshmen';
+                        WHERE studentyear ='freshmen'";
                 $result = $mysqli->query($sql);
 
                 if ($result->num_rows > 0) {
