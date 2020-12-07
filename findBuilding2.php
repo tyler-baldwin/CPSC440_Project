@@ -12,6 +12,7 @@ include "navbar.php"
     <h1>Resident Assistant DATABASE - Santoro</h1>
 </header>
 
+<!-- Inlcudes all of the deafault nav, Header -->
 <div class="column">
     <h2>York</h2>
     <table id="stuTable">

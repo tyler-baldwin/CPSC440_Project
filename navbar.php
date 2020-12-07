@@ -1,3 +1,4 @@
+<!-- Nav that can be imported into every file -->
 <nav>
 	<ul>
 	  <li><a href="index.php">Home</a></li>

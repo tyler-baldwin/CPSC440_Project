@@ -9,7 +9,7 @@
 <?php
 include "navbar.php"
 ?>
-
+<!-- Inlcudes all of the deafault nav, Header -->
 <header>
 	<h1>Resident Assistant DATABASE - Junior Emails</h1>
 </header>
