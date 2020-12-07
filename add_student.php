@@ -1,3 +1,4 @@
+
 <?php
 
 include "db_connect.php";
@@ -29,4 +30,4 @@ include "search_all_students.php"
 <br>
 	<br>
 	
-<a href ="index.php"> Return to main page</a>
+<h2><a href ="index.php"> Return to main page</a></h2>
