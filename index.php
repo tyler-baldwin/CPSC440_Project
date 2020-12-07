@@ -1,9 +1,51 @@
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 <html>
 
 <body style = "background-color:powderblue;">
 <head>
 </head>
+<style>
+body {
+          font-family: 'Roboto', sans-serif;
+          font-size: 16px;
+        }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #999;
+}
+</style>
+<ul>
+  <li><a href="index.php">Home</a></li>
+  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
+  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
+  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
+  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
+
+</ul>
+
+<center>
 <body>
 
 	<h1>Resident Assistant DATABASE</h1>
