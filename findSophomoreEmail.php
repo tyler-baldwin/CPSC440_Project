@@ -1,9 +1,12 @@
+<html lang="en">
+
 <head>
 	<title> RA Database </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="radatabase.css">
 </head>
+
 <nav>
 	<ul>
 	  <li><a href="index.php">Home</a></li>
@@ -21,6 +24,7 @@
 
 	</ul>
 </nav>
+
 <header>
 	<h1>Resident Assistant DATABASE - Sophomore Emails</h1>
 </header>
@@ -63,3 +67,4 @@
 
         </div>
 
+</html>
