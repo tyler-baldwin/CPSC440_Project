@@ -28,7 +28,18 @@
 		  <a href="findSeniorEmail.php">Senior</a>
 		</div>
 	  </li>
-
+	  <li class="dropdown">
+		<a href="javascript:void(0)" class="dropdown">Building Rosters</a>
+		<div class="dropdown-content">
+		  <a href="findbuilding1.php">York</a>
+		  <a href="findbuilding2">Santoro</a>
+		  <a href="findbuilding3">Potomac</a>
+		  <a href="findbuilding4">Warwick</a>
+		  <a href="findbuilding5">James River</a>
+		  <a href="findbuilding6">Rappahannock</a>
+		  <a href="findbuilding7">CNU Apartments</a>
+		</div>
+	  </li>
 	</ul>
 </nav>
 
