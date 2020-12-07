@@ -28,8 +28,20 @@ include "navbar.php"
 
 <body>
 
-	
-
+	<p>
+		Hello Resident Assistants. <br>
+		<br>
+		This is your database, with great power comes great responsibilty. This Database
+		is intented for the use of Resident Assistant ONLY. Violation of this will be considered a violation 
+		of your honor code. 
+	</p>
+	<p>
+		For a current and complete list please use links below. To quiery or filter the information, use the navagation
+		above. 
+	</p>
+	<p>
+		For quick singular student searchers, use the quick search bar below - use the last name only.
+	</p>
 	<?php
 
 	//connects to the database
@@ -72,18 +84,10 @@ include "navbar.php"
 	
 	<hr>
 	
-	<!--search for student by first name -->
-	<form action="search_fname.php">
-		<b>Search for a student by <i>FIRST</i> name</b><br> <br>
-		<input type="text" name="fname">
-		
-		<br>
-			<br>
-		
-		<input type="submit" value="Submit">
-		
-	</form>
-	<hr>
+	<!--search for student by LAST name -->
+	<p>
+		For quick search please search for student by last name.
+	</p>
 
 	<form action="search_lname.php">
 		<b>Search for a student by <i>LAST</i> name</b><br> <br>
