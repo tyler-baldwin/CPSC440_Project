@@ -16,16 +16,8 @@
 
 
 
-<nav>
-<ul>
-  <li><a href="index.php">Home</a></li>
-  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-  <li><a href="add_new_student.php">Add New Student</a></li>
-</ul>
-</nav>
-
 <header>
-	<h1>Resident Assistant DATABASE - Find A student by RA</h1>
+	<h1>RA DBMS - Find A student by RA</h1>
 </header>
 
 
@@ -64,121 +56,23 @@
     });
 </script>
 
-<center>
+<nav>
+	<ul>
+	  <li><a href="index.php">Home</a></li>
+	  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
+	  <li><a href="add_new_student.php">Add A New Student</a></li>
+	  <li class="dropdown">
+		<a href="javascript:void(0)" class="dropbtn">Email by Class</a>
+		<div class="dropdown-content">
+		  <a href="findFreshmanEmail.php">Freshman</a>
+		  <a href="findSophomoreEmail.php">Sophomore</a>
+		  <a href="findJuniorEmail.php">Junior</a>
+		  <a href="findSeniorEmail.php">Senior</a>
+		</div>
+	  </li>
 
-
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            background-color: powderblue;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #999;
-        }
-
-        .button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        /* Create three equal columns that floats next to each other */
-        .column {
-            float: left;
-            width: 45%;
-            padding: 15px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* end all formatting  */
-        #stuTable {
-            border-collapse: collapse;
-            width: 50%;
-            border: 1px solid #ddd;
-            font-size: 18px;
-        }
-
-        #stuTable th,
-        #stuTable td {
-            text-align: left;
-            padding: 12px;
-        }
-
-        #stuTable tr {
-            border-bottom: 1px solid #ddd;
-        }
-
-        #stuTable tr.header,
-        #stuTable tr:hover {
-            background-color: #f1f1f1;
-        }
-
-        #raTable {
-            border-collapse: collapse;
-            width: 50%;
-            border: 1px solid #ddd;
-            font-size: 18px;
-        }
-
-        #raTable th,
-        #raTable td {
-            text-align: left;
-            padding: 12px;
-        }
-
-        #raTable tr {
-            border-bottom: 1px solid #ddd;
-        }
-
-        #raTable tr.header,
-        #raTable tr:hover {
-            background-color: #f1f1f1;
-        }
-    </style>
-    <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-        <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-        <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-        <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
-
-    </ul>
-
+	</ul>
+</nav>
 
     <div class="row">
         <div class="column">
