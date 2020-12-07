@@ -7,7 +7,7 @@
 <?php
 include "navbar.php"
 ?>
-
+<!-- Inlcudes all of the deafault nav, Header -->
 <header>
     <h1>Resident Assistant DATABASE - CNU Apartments</h1>
 </header>

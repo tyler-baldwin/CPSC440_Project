@@ -10,7 +10,7 @@ include "navbar.php"
 <header>
     <h1>Resident Assistant DATABASE - Warwick</h1>
 </header>
-
+<!-- Inlcudes all of the deafault nav, Header -->
 
 
 <div class="column">
