@@ -5,7 +5,6 @@
 <html lang="en">
 
 
-
 <head>
 	<title> RA Database </title>
 	<meta charset="utf-8">
@@ -13,6 +12,11 @@
 	<link rel="stylesheet" href="radatabase.css">
 </head>
 
+<center>
+<img src="cnu.jpg" alt="CNU" >
+</center>
+
+<br>
 
 <?php
 include "navbar.php"
@@ -32,7 +36,7 @@ include "navbar.php"
 		Hello Resident Assistants. <br>
 		<br>
 		This is your database, with great power comes great responsibilty. This Database
-		is intented for the use of Resident Assistant ONLY. Violation of this will be considered a violation 
+		is intended for the use of Resident Assistant ONLY. Violation of this will be considered a violation 
 		of your honor code. 
 	</p>
 	<p>
@@ -42,6 +46,12 @@ include "navbar.php"
 	<p>
 		For quick singular student searchers, use the quick search bar below - use the last name only.
 	</p>
+	
+	<br>
+		<br>
+			<br>
+
+
 	<?php
 
 	//connects to the database
