@@ -40,6 +40,7 @@
 			<div class="dropdown-content">
 				<a href="search_all_organization.php">List all Orgs</a>
 				<a href="addNewOrg.php">Add Organization</a>
+				<a href="findOrgsStudents.php">Organization Rosters</a>
 			</div>
 		</li>
 
