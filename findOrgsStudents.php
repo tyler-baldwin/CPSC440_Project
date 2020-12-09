@@ -1,5 +1,5 @@
 <html lang="en">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <head>
 	<title> RA Database </title>
 	<meta charset="utf-8">
@@ -16,16 +16,43 @@ include "navbar.php"
 <main>
 
 <script>
-    function myfilter(x) {
+    function myfilter(orgID) {
         var filter, table, tr, td, i, txtValue;
-        //this filters the table by the RA Selected 
+        //this filters the table by the Org Selected 
+        //get tables
+        
+        var listOfMembers = [];
+
+        memtable = document.getElementById("memTable");
+        mtr = memtable.getElementsByTagName("tr");        
+        for (i = 0; i < mtr.length; i++) {
+            mtd = mtr[i].getElementsByTagName("td")[0];
+            if (mtd) {
+                txtValue = mtd.textContent || mtd.innerText;
+                if (txtValue.indexOf(orgID) > -1) {                    
+                    std = mtr[i].getElementsByTagName("td")[1];
+                    txtValue = std.textContent || std.innerText;
+                    listOfMembers.push(txtValue);
+                } else {
+                    mtr[i].style.display = "none";
+                }
+            }
+        }
+        
         table = document.getElementById("stuTable");
         tr = table.getElementsByTagName("tr");
         for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[8];
+            td = tr[i].getElementsByTagName("td")[0];
             if (td) {
                 txtValue = td.textContent || td.innerText;
-                if (txtValue.indexOf(x) > -1) {
+                legit = false;
+                for(j = 0;j < listOfMembers.length; j++){
+                    if(txtValue.indexOf(listOfMembers[j]) > -1){
+                        legit = true;
+                    }
+                }
+                
+                if (legit) {
                     tr[i].style.display = "";
                 } else {
                     tr[i].style.display = "none";
@@ -52,9 +79,9 @@ include "navbar.php"
             <h2>Select an Org</h2>
             <table id="raTable">
                 <tr>
-                    <th>RA ID</th>
-                    <th>Student ID</th>
-                    <th>Hall Director</th>
+                    <th>Org ID</th>
+                    <th>Org Name</th>
+                   
                 </tr>
 
                 <?php
@@ -73,8 +100,8 @@ include "navbar.php"
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>";
 
-                        echo "<td>" . $row["orgID"] . "</td>";
-                        echo "<td>" . $row["orgName"] . "</td>";
+                        echo "<td>" . $row["orgid"] . "</td>";
+                        echo "<td>" . $row["orgname"] . "</td>";
                         
 
                 ?>
@@ -94,7 +121,7 @@ include "navbar.php"
         </div>
 
         <div class="column">
-            <h2>member of</h2>
+            <h2>Students in Org Selected</h2>
             <table id="stuTable">
                 <tr>
 
@@ -147,7 +174,42 @@ include "navbar.php"
             </table>
 
         </div>
+        <div class="column"  display = "none">
+            <h2>member of</h2>
+            <table id="memTable">
+                <tr>
+                    <th>orgid</th>
+                    <th>studentid</th>                   
+                </tr>
 
+                <?php
+
+                include "db_connect.php";
+                if ($mysqli->connect_errno) {
+                    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+                }
+
+
+                $sql = "SELECT orgid, studentid FROM memberof ORDER BY orgid";
+                $result = $mysqli->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row["orgid"] . "</td>";
+                        echo "<td>" . $row["studentid"] . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "0 results";
+                }
+
+
+                ?>
+            </table>
+
+        </div>
 
 
     </div>
