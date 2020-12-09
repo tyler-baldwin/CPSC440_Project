@@ -22,7 +22,8 @@ if ($mysqli->connect_errno) {
 
 
 echo"<h2>Current list of all students living on campus in Organizations</h2>";
-$sql = "SELECT orgid, studentid FROM memberof ORDER BY orgid";
+$sql = "SELECT o.orgid, s.studentid, s.fname, s.lname FROM memberof o, student s 
+				WHERE o.studentid=s.studentid  ORDER BY orgid";
 $result = $mysqli->query($sql);
 
 
@@ -31,6 +32,8 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo "Organization ID: " . $row["orgid"].
 	"  -student ID: " . $row["studentid"]. 
+	"  -student First Name: " . $row["fname"].
+	"  -student Last Name: " . $row["lname"].
 	"<br>";
   }
 } else {

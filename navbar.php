@@ -1,5 +1,10 @@
 <!-- Nav that can be imported into every file -->
 <nav>
+	<center>
+	<img src="cnu.jpg" alt="CNU" >
+	</center>
+		<br>
+			<br>
 	<ul>
 
 		<li><a href="index.php">Home</a></li>

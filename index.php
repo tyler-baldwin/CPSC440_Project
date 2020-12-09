@@ -11,9 +11,7 @@
 	<link rel="stylesheet" href="radatabase.css">
 </head>
 
-<center>
-	<img src="cnu.jpg" alt="CNU">
-</center>
+
 
 <br>
 
