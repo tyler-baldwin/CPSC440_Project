@@ -13,9 +13,6 @@
 
 
 
-<br>
-
-
 <?php
 include "navbar.php"
 ?><?php
