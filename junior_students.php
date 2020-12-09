@@ -1,5 +1,5 @@
 <html lang="en">
-
+<!-- every page thing -->
 <head>
     <title> RA Database </title>
     <meta charset="utf-8">
@@ -35,7 +35,7 @@ include "navbar.php"
             echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
         }
 
-
+        //query for juniors
         $sql = "SELECT studentid, studentyear, gender, email, roomnum, fname, lname, buildingid, raid  FROM student
                         WHERE studentyear ='Junior'";
         $result = $mysqli->query($sql);

@@ -13,6 +13,7 @@ include "navbar.php"
 <header>
     <h1>Resident Assistant DATABASE - Organization Rosters</h1>
 </header>
+<!-- everything above this is cookie cutter for every sheet -->
 
 <body>
     <main>
@@ -21,12 +22,15 @@ include "navbar.php"
             function myfilter(orgID) {
                 var filter, table, tr, td, i, txtValue;
                 //this filters the table by the Org Selected 
-                //get tables
 
+
+                //list of members in org
                 var listOfMembers = [];
-
+                //get tables
                 memtable = document.getElementById("memTable");
                 mtr = memtable.getElementsByTagName("tr");
+                //this first gathers all the student ID's from member of and put them
+                //into the list i created
                 for (i = 0; i < mtr.length; i++) {
                     mtd = mtr[i].getElementsByTagName("td")[0];
                     if (mtd) {
@@ -35,12 +39,13 @@ include "navbar.php"
                             std = mtr[i].getElementsByTagName("td")[1];
                             txtValue = std.textContent || std.innerText;
                             listOfMembers.push(txtValue);
+                            mtr[i].style.display = "";
                         } else {
                             mtr[i].style.display = "none";
                         }
                     }
                 }
-
+                //now this applies that filer to students that are NOT in the currently selected orgID
                 table = document.getElementById("stuTable");
                 tr = table.getElementsByTagName("tr");
                 for (i = 0; i < tr.length; i++) {
@@ -76,6 +81,7 @@ include "navbar.php"
             });
         </script>
 
+        <!-- Calls and displays all 3 tables needed for this php file -->
         <div class="row">
             <div class="column">
                 <h2>Select an Org</h2>
@@ -177,7 +183,7 @@ include "navbar.php"
 
             </div>
             <div class="column" , display="none">
-                <h2>member of</h2>
+                <h2>Member Of</h2>
                 <table id="memTable">
                     <tr>
                         <th>orgid</th>
