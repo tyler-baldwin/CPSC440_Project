@@ -12,37 +12,38 @@ include "navbar.php"
 ?>
 
 <body>
-<?php
+	<?php
 
-include "db_connect.php";
+	include "db_connect.php";
 
-$orgID = $_GET["orgID"];
-$orgName = $_GET["orgName"];
+	$orgID = $_GET["orgID"];
+	$orgName = $_GET["orgName"];
 
 
-// add to the database
-echo"<h2>New Organization</h2>";
+	// add to the database
+	echo "<h2>New Organization</h2>";
 
-$sql = "INSERT INTO organization (orgID, orgName)
+	$sql = "INSERT INTO organization (orgID, orgName)
 		VALUES ('$orgID', '$orgName')";
-$result = $mysqli->query($sql);
+	$result = $mysqli->query($sql);
 
 
-//will show all students and new student.
-echo"<font size = '5'>";
-echo"hello you have added ".$_GET["orgID"]; echo" ".$_GET["orgName"]; 
-echo "</font>";
+	//will show all students and new student.
+	echo "<font size = '5'>";
+	echo "hello you have added " . $_GET["orgID"];
+	echo " " . $_GET["orgName"];
+	echo "</font>";
 
 
-include "search_all_organization.php" 
+	include "search_all_organization.php"
 
 
 
-?>
+	?>
 
-<br>
 	<br>
-	
+	<br>
+
 
 
 </html>

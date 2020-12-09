@@ -12,56 +12,56 @@
 include "navbar.php"
 ?>
 <h2>RA's Students</h2>
-            <table id="stuTable">
-                <tr>
+<table id="stuTable">
+	<tr>
 
-                    <th>Student ID</th>
-                    <th>Year</th>
-                    <th>Gender</th>
-                    <th>Email</th>
-                    <th>Room</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                     <th>Building ID</th>
-                     <th>RAID</th>
-
-                    
-                </tr>
-
-                <?php
-
-                include "db_connect.php";
-                if ($mysqli->connect_errno) {
-                    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-                }
+		<th>Student ID</th>
+		<th>Year</th>
+		<th>Gender</th>
+		<th>Email</th>
+		<th>Room</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Building ID</th>
+		<th>RAID</th>
 
 
-                $sql = "SELECT studentid, studentyear, gender, email, roomnum, fname, lname, buildingid, raid  FROM student";
-                $result = $mysqli->query($sql);
+	</tr>
 
-                if ($result->num_rows > 0) {
-                    // output data of each row
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr>";
+	<?php
 
-                        echo "<td>" . $row["studentid"] . "</td>";
-                        echo "<td>" . $row["studentyear"] . "</td>";
-                        echo "<td>" . $row["gender"] . "</td>";
-                        echo "<td>" . $row["email"] . "</td>";
-                        echo "<td>" . $row["roomnum"] . "</td>";
-                        echo "<td>" . $row["fname"] . "</td>";
-                        echo "<td>" . $row["lname"] . "</td>";
-                        echo "<td>" . $row["buildingid"] . "</td>";
-                        echo "<td>" . $row["raid"] . "</td>";
-                        echo "</tr>";
-                    }
-                } else {
-                    echo "0 results";
-                }
+	include "db_connect.php";
+	if ($mysqli->connect_errno) {
+		echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+	}
 
 
-                ?>
-            </table>
+	$sql = "SELECT studentid, studentyear, gender, email, roomnum, fname, lname, buildingid, raid  FROM student";
+	$result = $mysqli->query($sql);
+
+	if ($result->num_rows > 0) {
+		// output data of each row
+		while ($row = $result->fetch_assoc()) {
+			echo "<tr>";
+
+			echo "<td>" . $row["studentid"] . "</td>";
+			echo "<td>" . $row["studentyear"] . "</td>";
+			echo "<td>" . $row["gender"] . "</td>";
+			echo "<td>" . $row["email"] . "</td>";
+			echo "<td>" . $row["roomnum"] . "</td>";
+			echo "<td>" . $row["fname"] . "</td>";
+			echo "<td>" . $row["lname"] . "</td>";
+			echo "<td>" . $row["buildingid"] . "</td>";
+			echo "<td>" . $row["raid"] . "</td>";
+			echo "</tr>";
+		}
+	} else {
+		echo "0 results";
+	}
+
+
+	?>
+</table>
 
 
 </html>

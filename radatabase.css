@@ -1,7 +1,9 @@
-body {	  background-color:powderblue;
-          font-family: Roboto, sans-serif;
-          font-size: 16px;
-        }
+body {
+  background-color: powderblue;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -14,7 +16,7 @@ li {
   float: left;
 }
 
-li a , .dropbtn{
+li a, .dropbtn {
   display: block;
   color: white;
   text-align: center;
@@ -22,20 +24,23 @@ li a , .dropbtn{
   text-decoration: none;
 }
 
-li a:hover , .dropdown:hover .dropbtn{
+li a:hover, .dropdown:hover .dropbtn {
   background-color: #999;
 }
+
 li.dropdown {
   display: inline-block;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -43,82 +48,82 @@ li.dropdown {
   display: block;
   text-align: left;
 }
-.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 .button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
-        /* Create three equal columns that floats next to each other */
+/* Create three equal columns that floats next to each other */
+
 .column {
-            float: left;
-            width: 45%;
-            padding: 15px;
-        }
+  float: left;
+  width: 45%;
+  padding: 15px;
+}
 
-        /* Clear floats after the columns */
+/* Clear floats after the columns */
+
 .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+  content: "";
+  display: table;
+  clear: both;
+}
 
-        /* end all formatting  */
- #stuTable {
-            border-collapse: collapse;
-            width: 50%;
-            border: 1px solid #ddd;
-            font-size: 18px;
-        }
+/* end all formatting  */
 
- #stuTable th,
- #stuTable td {
-            text-align: left;
-            padding: 12px;
-        }
+#stuTable {
+  border-collapse: collapse;
+  width: 50%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#stuTable th, #stuTable td {
+  text-align: left;
+  padding: 12px;
+}
 
 #stuTable tr {
-            border-bottom: 1px solid #ddd;
-        }
+  border-bottom: 1px solid #ddd;
+}
 
-#stuTable tr.header,
-#stuTable tr:hover {
-            background-color: #f1f1f1;
-        }
+#stuTable tr.header, #stuTable tr:hover {
+  background-color: #f1f1f1;
+}
 
 #raTable {
-            border-collapse: collapse;
-            width: 50%;
-            border: 1px solid #ddd;
-            font-size: 18px;
-        }
+  border-collapse: collapse;
+  width: 50%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
 
-#raTable th,
-#raTable td {
-            text-align: left;
-            padding: 12px;
-        }
+#raTable th, #raTable td {
+  text-align: left;
+  padding: 12px;
+}
 
 #raTable tr {
-            border-bottom: 1px solid #ddd;
-        }
+  border-bottom: 1px solid #ddd;
+}
 
-#raTable tr.header,
-#raTable tr:hover {
-            background-color: #f1f1f1;
-        }
-		
-		
+#raTable tr.header, #raTable tr:hover {
+  background-color: #f1f1f1;
+}
