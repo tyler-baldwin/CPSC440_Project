@@ -39,16 +39,18 @@ if ($result->num_rows > 0) {
 }
 
 ?>
+
 <br>
 <br>
 <form action="search_by_studentid.php">
-	<b>Search for a student by <i>Student ID</i></b><br> <br>
-	<input type="text" name="fname">
+		<b>Search for a student by <i>Student ID</i></b><br> <br>
+		<input type="text" name="studentid">
+		
+		<br>
+			<br>
+		
+		<input type="submit" value="Submit">
 
-	<br>
-	<br>
-
-	<input type="submit" value="Submit">
 
 
 </html>
