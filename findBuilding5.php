@@ -6,7 +6,8 @@
 </head>
 <?php
 include "navbar.php"
-?><!-- Inlcudes all of the deafault nav, Header -->
+?>
+<!-- Inlcudes all of the deafault nav, Header -->
 <header>
     <h1>Resident Assistant DATABASE - James River</h1>
 </header>
