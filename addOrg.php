@@ -7,9 +7,6 @@
 	<link rel="stylesheet" href="radatabase.css">
 </head>
 
-<?php
-include "navbar.php"
-?>
 
 <body>
 	<?php
