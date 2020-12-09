@@ -21,7 +21,7 @@
 <?php
 include "navbar.php"
 ?>
-
+<!-- Inlcudes all of the deafault nav, Header -->
 <body>
 
 

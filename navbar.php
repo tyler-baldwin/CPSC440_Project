@@ -1,5 +1,7 @@
+<!-- Nav that can be imported into every file -->
 <nav>
 	<ul>
+
 	  <li><a href="index.php">Home</a></li>
 	  <li><a href="find_students_by_RA.php">Find Students by RA</a></li>
 	  <li><a href="add_new_student.php">Add A New Student</a></li>
@@ -33,5 +35,13 @@
 		  <a href="findbuilding7.php">CNU Apartments</a>
 		</div>
 	  </li>
+  <li class="dropdown">
+			<a href="javascript:void(0)" class="dropdown">Organizations</a>
+			<div class="dropdown-content">
+				<a href="search_all_organization.php">List all Orgs</a>
+				<a href="addNewOrg.php">Add Organization</a>
+			</div>
+		</li>
+
 	</ul>
 </nav>

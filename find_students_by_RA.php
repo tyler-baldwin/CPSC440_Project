@@ -1,5 +1,3 @@
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <html lang="en">
     
@@ -17,7 +15,7 @@
 <script>
     function myfilter(x) {
         var filter, table, tr, td, i, txtValue;
-        
+        //this filters the table by the RA Selected 
         table = document.getElementById("stuTable");
         tr = table.getElementsByTagName("tr");
         for (i = 0; i < tr.length; i++) {
@@ -32,7 +30,7 @@
             }
         }
     }
-
+    //this is a listener for which RA was selected
     $(document).on(".use-address").click(function() {
         $(".use-address").click(function() {
             var $row = $(this).closest("tr"),

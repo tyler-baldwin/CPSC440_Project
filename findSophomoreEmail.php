@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="radatabase.css">
 </head>
-
+<!-- Inlcudes all of the deafault nav, Header -->
 <?php
 include "navbar.php"
 ?>
